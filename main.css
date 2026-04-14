@@ -58,9 +58,9 @@ body {
      background-image: url('img/orange1.jpg'); 
      -webkit-background-clip: text; 
      background-clip: text;
-  
      -webkit-text-fill-color: transparent; 
-     color: transparent;   
+     color: transparent;  
+     line-height: 1; 
     
     }
     
@@ -69,7 +69,7 @@ body {
 
         column-count: 4;
         column-gap: 40px;
-        padding: 60px;
+        padding: 73px;
         break-inside: avoid;
         
         }
