@@ -2,7 +2,7 @@
 body {
     margin: 0;
     background-color: blue;
-    font-family: "Arial", sans-serif;
+    font-family: "Helvetica", sans-serif;
     text-align: left;
     color: white;
   
@@ -30,13 +30,13 @@ body {
         }
         
         nav a {
-          display:inline-block;
+        display:inline-block;
         padding: 0px 20px;
         background: #fd7a01;
         color: white;
         text-decoration: none;
         border-radius: 7px;
-          transition: transform 0.2s;
+        transition: transform 0.2s;
           
         
         
@@ -71,6 +71,7 @@ body {
         column-gap: 40px;
         padding: 73px;
         break-inside: avoid;
+        grid-gap: 35px;
         
         }
 
@@ -83,7 +84,6 @@ body {
     margin: auto;
     cursor: pointer;
     transition: transform 0.2s;
-    break-inside: avoid;
 
     
     }
@@ -95,6 +95,7 @@ body {
     margin-top: 10px;
     font-weight: 500;
     break-inside: avoid;
+    row-gap: 40px;
 
     
     }
@@ -233,35 +234,37 @@ body {
       background: #fd7a01;
       color: white;
       text-align: left;
-      padding: 10px;
-      margin-top: auto;   
+      padding: 30px;
+      margin-top: auto;  
+      background-image: url('img/orange1.jpg');
+
       }
     
 
-    .h3 {
-      font-size: 10vw;
-      font-family: "doublebass", sans-serif;
-      font-weight: 700;
-      font-style: normal; 
-      align:left;
-    }
-  
-    .header-right {
+   
+    .button {
       position: fixed;    
       top: 0;
       left: 0;
       width: 100%;
-      background-color: #fd7a01;  
       display: flex;
       justify-content: right;
       z-index: 1000;       
-      padding: 5px;
+      padding: 12px;
+      background-image: url('img/orange1.jpg');
+      font-weight: 400;
+
+      
     }
     
-    .header-right a {
-      color: white;
-      text-decoration: none;
+    .button a {
+      color: blue;
       font-size: 18px;
+      background-image: url('img/orange1.jpg');
+      background: transparent;
+
+
+
     }
     
     body {
@@ -275,6 +278,7 @@ body {
       display: flex;
       align-items: center;
       width: 100%;
+      
     }
     
     .image-text {
