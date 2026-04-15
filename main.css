@@ -10,7 +10,7 @@ body {
     }
 
     img {
-
+        width: 100%;
         max-width: 100%;
     }
     
@@ -54,26 +54,30 @@ body {
     font-style: normal;      
     font-size: 14vw;
      margin: 0;
-     line-height:1.1;
+     line-height:0.9;
      background-image: url('img/orange1.jpg'); 
      -webkit-background-clip: text; 
      background-clip: text;
      -webkit-text-fill-color: transparent; 
      color: transparent;  
-     line-height: 1; 
     
     }
     
     
     .image-grid {
-
-        column-count: 4;
-        column-gap: 40px;
+          
+      display: grid-lanes;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  
+        display: grid;
         padding: 73px;
         break-inside: avoid;
-        grid-gap: 35px;
-        
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
         }
+
+        
+
 
     
     .image-grid img {
@@ -84,22 +88,13 @@ body {
     margin: auto;
     cursor: pointer;
     transition: transform 0.2s;
+    
 
     
     }
     
     
-    .image-grid p {
-    
-    font-size: 12.5px;
-    margin-top: 10px;
-    font-weight: 500;
-    break-inside: avoid;
-    row-gap: 40px;
-
-    
-    }
-    
+  
     .grid-container {
         display: grid;
         grid-template-columns: repeat(3, 100px);
@@ -107,15 +102,7 @@ body {
       }
       
     
-    
-    
 
-    img {
-
-        max-width: 400px;
-        height: auto;
-        
-        }
 
         #lightbox {
 
@@ -123,8 +110,8 @@ body {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            width: auto;
+            height: auto;
             background: rgba(0,0,0,0.85);
             justify-content: center;
             align-items: center;
@@ -133,17 +120,27 @@ body {
                         
             #lightbox img {
             
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 10px;
-            
+              width: auto;
+              height: auto;
+              max-width: 90vw;
+              max-height: 90vh;
+              border-radius: 20px;
+              transform: scale(1.05);
             }
 
             .image-grid img {
                 cursor: pointer;
                 transition: transform 0.2s;
                 break-inside: avoid;
+                gap: 20px;
+                width: 100%;
+                display: block;
 
+                }
+
+                .image-grid div {
+                  break-inside: avoid;
+                  margin-bottom: 40px; 
                 }
                 
                 .image-grid img:hover {
@@ -152,12 +149,9 @@ body {
     
  .description {
      width: 750px;           
-     padding: 50px;         
+     padding: 60px;         
      text-align: left;       
      border-radius: 2px; 
-     position: absolute;     
-     top: 200px;              
-     right: 378px; 
      font-size: 14px;           
       
 }
@@ -275,15 +269,33 @@ body {
    
     
     .header-left {
+      font-family: "peckham-press", sans-serif;
       display: flex;
-      align-items: center;
+      align-items: left;
       width: 100%;
+      font-size: 40px;
+      color:#fd7a01;
+
       
     }
-    
-    .image-text {
-      margin: 0;
+
+    .description {
+font-size: 20px;
+
     }
+
+  
+    
+  .form-container img {
+    width: 20%;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    justify-content: left;
+    display: flex;   
+    justify-content: center; 
+}
+
+
     
     .arrow-img {
       width: 170px;
@@ -297,6 +309,31 @@ body {
       width:100%;
       text-align:center;
       column-count:2;
+     }  
+
+    .arrow-img {
+        width: 100px;
+        height: 200px;
+      }
+
+      .image-grid {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        margin: -25px;
+      }
+
+    .button a {
+      scale: 70%;
+      display: flex;
+      gap:10px;
+      justify-content: center;
     }
+
+    .h1 {
+      text-align: right;
+    }
+
+   
   
     }
