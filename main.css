@@ -104,30 +104,36 @@ body {
     
 
 
-        #lightbox {
-
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: auto;
-            height: auto;
-            background: rgba(0,0,0,0.85);
-            justify-content: center;
-            align-items: center;
-            
-            }
-                        
-            #lightbox img {
-            
-              width: auto;
-              height: auto;
-              max-width: 90vw;
-              max-height: 90vh;
-              border-radius: 20px;
-              transform: scale(1.05);
-            }
-
+      #lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;            
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.95);  
+        z-index: 9999;
+        padding: 20px;
+      }
+      
+      #lightbox img {
+        max-width: 100vw;
+        max-height: 90vh;
+        width: auto;
+        height: auto;
+        object-fit: contain;   
+      }
+      
+      #lightbox-caption {
+        margin-top: 15px;
+        color: white;
+        font-size: 16px;
+        text-align: center;
+        max-width: 80vw;
+      }
             .image-grid img {
                 cursor: pointer;
                 transition: transform 0.2s;
@@ -177,29 +183,7 @@ body {
     opacity: 0.100;
   }
 
-  .form-container1  img {
-    position: absolute;     
-    top: 300px;
-    right: 900px;
-    max-height: 350px;
-
-  }
-  .form-container2  img { 
-    position: absolute;     
-    top: 300px;
-    right: 575px;
-    max-height: 300px;
-
-  }
-  .form-container3  img {
-    position: absolute;     
-    top: 300px;
-    right: 260px;
-    max-height: 300px;
-  }
-
-
-          
+  
     html, body {
       height: 100%;
       margin: 0;
@@ -234,7 +218,6 @@ body {
 
       }
     
-
    
     .button {
       position: fixed;    
@@ -256,9 +239,6 @@ body {
       font-size: 18px;
       background-image: url('img/orange1.jpg');
       background: transparent;
-
-
-
     }
     
     body {
@@ -270,37 +250,38 @@ body {
     
     .header-left {
       font-family: "peckham-press", sans-serif;
-      display: flex;
       align-items: left;
       width: 100%;
       font-size: 40px;
       color:#fd7a01;
-
-      
+      margin-bottom: -110px; 
     }
 
     .description {
-font-size: 20px;
+      font-size: 20px;
 
     }
 
-  
-    
-  .form-container img {
-    width: 20%;
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    justify-content: left;
-    display: flex;   
-    justify-content: center; 
-}
+    .form-container {
+      display: flex;
+      gap: 5px;
+      justify-content: flex-start; 
+      align-items: center;
+    }
 
+
+    .form-container img {
+      width: 400px; /* or whatever size you want */
+      height: auto;
+      display: block;
+      padding: 50px;
+    }
 
     
     .arrow-img {
-      width: 170px;
+      width: 160px;
       height: auto;
-      margin-left: auto;
+      align-items: right;
     }
     
     @media (max-width:950px) {
@@ -334,6 +315,11 @@ font-size: 20px;
       text-align: right;
     }
 
+    .form-container img {
+      flex-direction: column;
+      align-items: flex-start;
+  
+    }
    
   
     }
