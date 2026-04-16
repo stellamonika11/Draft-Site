@@ -18,7 +18,11 @@ body {
       width: 100%;
       padding: 30px 60px;
       box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
     }
+
         nav.header-right {
           
           position:fixed;
@@ -65,34 +69,22 @@ body {
     
     
     .image-grid {
-          
-      display: grid-lanes;
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  
-        display: grid;
-        padding: 73px;
-        break-inside: avoid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 40px;
-        }
-
-        
-
-
-    
-    .image-grid img {
-    
-    width: 100%;
-    max-width: 600px;
-    display: grid;
-    margin: auto;
-    cursor: pointer;
-    transition: transform 0.2s;
-    
-
-    
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      align-items: start;
+      grid-auto-flow: dense;
+      padding: 40px;
+      
     }
     
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      height: 450px;     
+      object-fit: cover;
+    }
     
   
     .grid-container {
@@ -134,31 +126,21 @@ body {
         text-align: center;
         max-width: 80vw;
       }
-            .image-grid img {
-                cursor: pointer;
-                transition: transform 0.2s;
-                break-inside: avoid;
-                gap: 20px;
-                width: 100%;
-                display: block;
+            
 
-                }
-
-                .image-grid div {
-                  break-inside: avoid;
-                  margin-bottom: 40px; 
-                }
+              
                 
-                .image-grid img:hover {
-                transform: scale(1.05) rotate(3deg);
-                }
+      .image-grid img:hover {
+        transform: scale(1.05) rotate(3deg);
+      }
     
  .description {
      width: 750px;           
-     padding: 60px;         
      text-align: left;       
      border-radius: 2px; 
-     font-size: 14px;           
+     font-size: 20px;    
+     padding-left: 65px;
+
       
 }
 
@@ -168,6 +150,14 @@ body {
     padding: 40px;    
     top: 325px;              
     right: 550px; 
+
+}
+
+.h3 {
+  font-family: "peckham-press", sans-serif;
+  font-weight: 400;
+  color: blue;
+
 
 }
 
@@ -208,18 +198,23 @@ body {
       flex: 1;
     }
     
-    footer {
+    .footer-content {
       background: #fd7a01;
       color: white;
       text-align: left;
       padding: 30px;
       margin-top: auto;  
       background-image: url('img/orange1.jpg');
-
       }
-    
+
+      footer p {
+        max-width: 700px;
+      }
+
+  
    
     .button {
+      font-family: "peckham-press", sans-serif;
       position: fixed;    
       top: 0;
       left: 0;
@@ -250,17 +245,17 @@ body {
     
     .header-left {
       font-family: "peckham-press", sans-serif;
-      align-items: left;
       width: 100%;
       font-size: 40px;
       color:#fd7a01;
-      margin-bottom: -110px; 
+      display: flex;
+      padding-left: 0px;
+      align-items: flex-end; 
+      gap: 20px; /
+
     }
 
-    .description {
-      font-size: 20px;
-
-    }
+  
 
     .form-container {
       display: flex;
@@ -271,19 +266,33 @@ body {
 
 
     .form-container img {
-      width: 400px; /* or whatever size you want */
+      width: 400px; 
       height: auto;
       display: block;
       padding: 50px;
     }
 
     
+    .arrow-container {
+      display: flex;
+      justify-content: flex-end; 
+      align-items: flex-end;
+
+    }
+
     .arrow-img {
       width: 160px;
-      height: auto;
-      align-items: right;
+      height: auto;  
+      align-items: right;  
     }
+   
     
+
+p {
+  margin-top: 0;
+}
+
+
     @media (max-width:950px) {
     nav.header-right {
       position:static;
@@ -295,6 +304,8 @@ body {
     .arrow-img {
         width: 100px;
         height: 200px;
+        align-items: right;
+
       }
 
       .image-grid {
@@ -312,7 +323,7 @@ body {
     }
 
     .h1 {
-      text-align: right;
+      text-align: left;
     }
 
     .form-container img {
@@ -321,5 +332,13 @@ body {
   
     }
    
+    .description {
+      max-width: 400px;
+    }
+
+    .form-container {
+      max-width: 400px;
+
+    }
   
     }
